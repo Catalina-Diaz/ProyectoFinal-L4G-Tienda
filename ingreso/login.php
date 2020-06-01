@@ -9,17 +9,14 @@
             
         }else{
 
-            require_once "config.php";
-
+            include( "../includes/db.php");
             $user = $_POST['username'];
             $pass = $_POST['password'];
-
-            $query = mysqli_query($config, "SELECT * FROM sesion WHERE correo='$user' AND passwor= '$pass' ");
+            $vari = "SELECT * FROM sesion WHERE correo='".$user."' AND passwor= '".$pass."'";
+            $query= DB::query($vari);
             $result = mysqli_num_rows($query);
-
             if($result > 0){
                 $data = mysqli_fetch_array($query);
-
                 print_r($data);
             }
         }

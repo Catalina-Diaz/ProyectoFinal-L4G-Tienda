@@ -1,6 +1,8 @@
+<?php
+    include("../guardar_persona.php");
+?>
 <!DOCTYPE html>
     <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +25,7 @@
                         </div>
                     </div>  
                     <div class="panel-body" >
-                        <form id="signupform" class="form-horizontal" role="form">
+                        <form id="signupform" class="form-horizontal" role="form" method="post">
 
                             <div class="form-group">
                                 <label for="nombre" class="col-md-3 control-label">Nombres</label>
@@ -42,7 +44,7 @@
                             <div class="form-group">
                                 <label for="password" class="col-md-3 control-label">Contraseña</label>
                                 <div class="col-md-9">
-                                    <input type="password" class="form-control" name="contaseña" placeholder="Ingresa una contraseña">
+                                    <input type="password" class="form-control" name="pasword" placeholder="Ingresa una contraseña">
                                 </div>
                             </div>
                                 
@@ -70,11 +72,12 @@
                             <div class="form-group">
                                 <!-- Button -->                                        
                                 <div class="col-md-offset-3 col-md-9">
-                                    <button id="btn-signup" type="button" class="btn btn-success"><i class="icon-hand-right"></i> &nbsp Registrate</button>
+                                    <button id="btn-signup" type="submit" class="btn btn-success"><i class="icon-hand-right"></i> &nbsp Registrate</button>
                                     <span style="margin-left:8px">o</span>  
                                     <a href="login.php"> Inicia Sesión </a>
                                 </div>
                             </div>
+                            
                         </form>
                     </div>
                 </div>    

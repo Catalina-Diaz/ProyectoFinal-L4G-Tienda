@@ -29,15 +29,7 @@
                 <ul class="menu">
 
                     <li class="first-item">
-                        <a href="#">
-                            <img src="imahom/home.jpg" alt="" class="imagen">
-                            <span class="text-item">Inicio</span>
-                            <span class="down-item"></span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#">
+                    <a href="#">
                             <img src="imahom/us.jpg" alt="" class="imagen">
                             <span class="text-item">Nosotros</span>
                             <span class="down-item"></span>
