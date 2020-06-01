@@ -1,4 +1,5 @@
 <?php 
+
 include('config.php');
     class DB {
 
@@ -10,14 +11,15 @@ include('config.php');
 
         //CV
         public static function getConnection(){
+           
             return new mysqli(self::$host, self::$user, self::$password, self::$db);
         }
         //CV
-
+      
         public static function query($sql){
             //Crear la conexión
             $con = new mysqli(self::$host, self::$user, self::$password, self::$db);
-            
+            //echo("no");
             $result = $con->query($sql); 
             
             $con->close();

@@ -22,17 +22,17 @@
             <nav class="navegacion">
                 <ul class="menu">
 
-                    <li class="first-item">
-                        <a href="../inicio/home.php">
-                            <img src="../imahom/home.jpg" alt="" class="imagen">
+                <li class="first-item">
+                        <a href="">
+                            <img src="../imagenes/inicio.png" alt="" class="imagen">
                             <span class="text-item">Inicio</span>
                             <span class="down-item"></span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="#">
-                            <img src="../imahom/us.jpg" alt="" class="imagen">
+                        <a href="../ingreso/login.php">
+                            <img src="../imagenes/seccion.png" alt="" class="imagen">
                             <span class="text-item">Nosotros</span>
                             <span class="down-item"></span>
                         </a>
@@ -40,7 +40,7 @@
 
                     <li>
                         <a href="../ingreso/login.php">
-                            <img src="../imahom/seccion.png" alt="" class="imagen">
+                            <img src="../" alt="" class="imagen">
                             <span class="text-item">Inicio De Sesion</span>
                             <span class="down-item"></span>
                         </a>
