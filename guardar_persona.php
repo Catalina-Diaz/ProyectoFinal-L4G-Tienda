@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php 
     include('includes/db.php');
     if(!empty($_POST)){
@@ -48,8 +49,24 @@
             }
         }
 
+=======
+<?php
+include('includes/db.php');
+if (!empty($_POST)) {
+    // $id = $_POST["id"];
+>>>>>>> 1af8c0c3307052de49b64053fd60487bba29c3ff
 
+    $nombre = $_POST["nombre"];
+    $email = $_POST["email"];
+    $pasword = $_POST["pasword"];
+    $celular = $_POST["celular"];
+    $direccion = $_POST["direccion"];
+    $ciudad = $_POST["ciudad"];
+    $estado = "inactivo";
+    $sql = "insert into usuarios(nombre,correo,password,telefono,ciudad,direccion) values('" . $nombre . "','" . $email . "','" . $pasword . "','" . $celular . "','" . $ciudad . "','" . $direccion . "');";
     DB::query($sql);
-    header('Location: ../inicio/home.php');
-    }
-?>
+    $sql = " insert into sesion(correo,passwor,estado) values('" . $email . "','" . $pasword . "','".$estado."');";
+    DB::query($sql);
+    $_POST = array();
+    header('Location: crearusuario.php');
+}
