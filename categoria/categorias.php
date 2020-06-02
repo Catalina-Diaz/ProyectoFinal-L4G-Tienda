@@ -63,10 +63,11 @@
             <div class="linea"></div>
             <div class="contenedor-imagenes">
                 <div class="imagen">
-                    <img src="imges/blusa.jpg" alt="">
+                <a href="#"><img src="imges/blusa.jpg" alt="">
                     <div class="overlay">
                         <h2>Blusas</h2>
                     </div>
+                    </a>
                 </div>
                 <div class="imagen">
                     <img src="imges/vestido.jpg" alt="">

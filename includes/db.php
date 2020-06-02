@@ -1,32 +1,29 @@
-<?php 
+<?php
 
 include('config.php');
-    class DB {
+class DB
+{
 
-        //Datos de conexión - CV
-        static $host = HOST;
-        static $user = USER;
-        static $password = PASSWORD;
-        static $db = DB;
+    //Datos de conexión - CV
+    static $host = HOST;
+    static $user = USER;
+    static $password = PASSWORD;
+    static $db = DB;
 
-        //CV
-        public static function getConnection(){
-           
-            return new mysqli(self::$host, self::$user, self::$password, self::$db);
-        }
-        //CV
-      
-        public static function query($sql){
-            //Crear la conexión
-            $con = new mysqli(self::$host, self::$user, self::$password, self::$db);
-            //echo("no");
-            $result = $con->query($sql); 
-            
-            $con->close();
+    //CV
+    public static function getConnection()
+    {
 
-            return $result;
-            
-            //aca no se ejecuta nada
-        }
+        return new mysqli(self::$host, self::$user, self::$password, self::$db);
     }
-?>
+    //CV
+
+    public static function query($sql)
+    {
+        $con = new mysqli(self::$host, self::$user, self::$password, self::$db);
+
+        $result = $con->query($sql);
+        $con->close();
+        return $result;
+    }
+}
