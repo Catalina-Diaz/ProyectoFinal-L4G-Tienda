@@ -12,7 +12,7 @@
             include( "../includes/db.php");
             $user = $_POST['username'];
             $pass = $_POST['password'];
-            $vari = "SELECT * FROM sesion WHERE correo='".$user."' AND passwor= '".$pass."'";
+            $vari = "SELECT * FROM sesion WHERE correo='".$user."' AND password= '".$pass."'";
             $query= DB::query($vari);
             $result = mysqli_num_rows($query);
             if($result > 0){
@@ -30,8 +30,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Iniciar sesion</title>
-        <!--Bosstrap-->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!--Bosstrap-->b 23
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf Q9Ifjh" crossorigin="anonymous">
         <!--Bosstrap-->
         <link rel="stylesheet" href="style.css">
     </head>

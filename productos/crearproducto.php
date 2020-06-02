@@ -36,8 +36,7 @@
                             <div class="form-group">
                                 <label for="email" class="col-md-3 control-label">Descripcion</label>
                                 <div class="col-md-9">
-                                    <!--<input type="text" class="form-control" name="precio" placeholder="Ingresa el precio">-->
-                                    <textarea rows="4" cols="48"></textarea>
+                                <input type="text" class="form-control" name="precio" placeholder="Ingresa el precio">
                                 </div>
                             </div>
 
@@ -49,12 +48,10 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="direccion" class="col-md-3 control-label">Categoria</label>
+                                <label for="categoria" class="col-md-3 control-label">Categoria</label>
                                 <div class="col-md-9">
                                     <select class="form-control form-control-sm">
-                                        <option>Vacio </option>
-                                        <option>Pantalones</option>
-                                        <option>Zapatos</option>
+
                                     </select>
                                 </div>
                             </div>
@@ -72,7 +69,7 @@
                             <div class="form-group">
                                 <!-- Button -->                                        
                                 <div class="col-md-offset-3 col-md-9">
-                                    <button id="btn-signup" type="button" class="btn btn-success"><i class="icon-hand-right"></i> &nbsp Registrate</button>
+                                    <button id="btn-signup" type="button" class="btn btn-success"><i class="icon-hand-right"></i> &nbsp Guardar</button>
                                     <span style="margin-left:8px"></span>  
                                     <a href="login.php"> Ver productos vigentes</a>
                                 </div>

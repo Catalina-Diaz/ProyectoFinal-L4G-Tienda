@@ -1,4 +1,4 @@
-<?php 
+<?php /*
     include('includes/db.php');
 
     if(isset($_GET['estado']) == TRUE){
@@ -32,5 +32,5 @@
     }
 
     DB::query($sql);
-    header('Location: index.php');
+    header('Location: index.php')*/
 ?>
