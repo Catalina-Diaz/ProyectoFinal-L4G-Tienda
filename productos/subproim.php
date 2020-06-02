@@ -13,6 +13,7 @@
         $tmpName       = $_FILES['imagen']['tmp_name'];
         $finalName     = $dirFullImage . $_FILES['imagen']['name'];
 
+        
         copiarImagen($_FILES['imagen']['tmp_name'], $dirFullImage . $_FILES['imagen']['name'] );
         
         $im = null;

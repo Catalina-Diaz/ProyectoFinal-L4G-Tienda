@@ -55,14 +55,10 @@ if ($result > 0) {
         <a class="navbar-brand">
             <H1>
                 <p>TIENDA <kbd>TIERRA MUJER</kbd></p>
-                <H1>
+            <H1>
         </a>
-        <div style=" font-size: 20px;">
-            <span class="text-item"> <?php echo $usuario ?> </span>
-            <a href="" onclick="<?php fun(); ?>" class="deletebtn"><?php echo $otro ?></a>
-        </div>
-        <form class="form-inline">
 
+        <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Buscador" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">BUSCAR</button>
         </form>
@@ -103,23 +99,6 @@ if ($result > 0) {
                         <span class="down-item"></span>
                     </a>
                 </li>
-                <?php
-                    if($usuario!=""){
-                    ?>
-                <li>
-                   
-                    <a href="../productos/crearproducto.php">
-                        <img src="imahom/cate.png" alt="" class="imagen">
-                        <span class="text-item">Agregar productos</span>
-                        <span class="down-item"></span>
-                    </a>
-                    
-                </li>
-                <?php
-                    }else{
-
-                    }
-                    ?>
 
             </ul>
 

@@ -27,20 +27,12 @@ include("guardarproducto.php");
                     </div>
                 </div>
                 <div class="panel-body">
-                    <form id="signupform" class="form-horizontal" role="form" method="POST" enctype="multipart/form-data">
+                    <form id="signupform" onsubmit="return validar()" class="form-horizontal" role="form" method="POST" enctype="multipart/form-data">
 
-<<<<<<< HEAD
-                            <div class="form-group">
-                                <label for="email" class="col-md-3 control-label">Descripcion</label>
-                                <div class="col-md-9">
-                                <input type="text" class="form-control" name="precio" placeholder="Ingresa el precio">
-                                </div>
-=======
                         <div class="form-group">
                             <label for="nombre" class="col-md-3 control-label">Nombre de producto</label>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" name="nombre" placeholder="Producto">
->>>>>>> 1af8c0c3307052de49b64053fd60487bba29c3ff
+                                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Producto" value="<?php echo $nombree ?>" required>
                             </div>
                         </div>
 
@@ -48,70 +40,65 @@ include("guardarproducto.php");
                             <label for="email" class="col-md-3 control-label">Descripcion</label>
                             <div class="col-md-9">
                                 <!--<input type="text" class="form-control" name="precio" placeholder="Ingresa el precio">-->
-                                <textarea name="descripccion" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                                <textarea name="descripccion" class="form-control" id="exampleFormControlTextarea1" rows="4" value="<?php echo $descripccionn ?>"></textarea>
                             </div>
                         </div>
 
-<<<<<<< HEAD
-                            <div class="form-group">
-                                <label for="categoria" class="col-md-3 control-label">Categoria</label>
-                                <div class="col-md-9">
-                                    <select class="form-control form-control-sm">
-
-                                    </select>
-                                </div>
-=======
                         <div class="form-group">
                             <label for="email" class="col-md-3 control-label">Precio</label>
                             <div class="col-md-9">
-                                <input type="text" class="form-control" name="precio" placeholder="Ingresa el precio">
->>>>>>> 1af8c0c3307052de49b64053fd60487bba29c3ff
+                                <input type="number" class="form-control" name="precio" value="<?php echo $precioo ?>" placeholder="Ingresa el precio" required>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="direccion" class="col-md-3 control-label">Categoria</label>
                             <div class="col-md-9">
-                                <select name="categoria" class="form-control form-control-sm">
-                                    <option> </option>
+                                <select name="categoria" class="form-control form-control-sm"  required>
+                                    <option value="<?php echo $categoriaa ?>"> </option>
+                                    <?php
+                                    $result1 = mysqli_num_rows($categoria);
+                                    if ($result1 > 0) {
+                                        while ($fila = mysqli_fetch_assoc($categoria)) {
+                                    ?>
+                                        <option > <?php echo $fila["nombre"] ?></option>
+
+                                    <?php
+                                        }
+                                    }
+                                    ?>
+
                                     <option>Pantalones</option>
-                                    <option>Zapatos</option>
-                                    <option>blusas</option>
+
                                 </select>
                             </div>
                         </div>
 
-<<<<<<< HEAD
-                            <div class="form-group">
-                                <!-- Button -->                                        
-                                <div class="col-md-offset-3 col-md-9">
-                                    <button id="btn-signup" type="button" class="btn btn-success"><i class="icon-hand-right"></i> &nbsp Guardar</button>
-                                    <span style="margin-left:8px"></span>  
-                                    <a href="login.php"> Ver productos vigentes</a>
-                                </div>
-=======
                         <div class="form-group">
                             <label for="imagen" class="col-md-3 control-label">Imagen</label>
                             <div class="col-md-9">
-                                <input type="file" name="imagen" id="imagen">
->>>>>>> 1af8c0c3307052de49b64053fd60487bba29c3ff
+                                <input type="file" name="imagen" id="imagen" value="<?php echo $imagenn ?>">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <!-- Button -->
                             <div class="col-md-offset-3 col-md-9">
-                                <button id="btn-signup" type="submit" class="btn btn-success"><i class="icon-hand-right"></i> Guardar</button>
+                                <button id="btn" type="submit" class="btn btn-success"><i class="icon-hand-right"></i> Guardar</button>
                                 <span style="margin-left:8px"></span>
                                 <a href="login.php"> Ver productos vigentes</a>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <!-- Button -->
+                            <div class="col-md-offset-3 col-md-9">
+                                <?php echo $mensaje ?>
+                            </div>
+                        </div>
                     </form>
                 </div>
-                <div class="alert alert-danger" role="alert">
-  <?php echo "$mensaje"; ?>
-</div>
             </div>
+
         </div>
 
         <div id="loginbox" style="margin-top:50px;" class=" mainbox col-md-6 col-md-offset-3 col-sm-4 col-sm-offset-8">

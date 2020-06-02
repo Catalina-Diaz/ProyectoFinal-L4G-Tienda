@@ -2,21 +2,7 @@
 include("../guardar_persona.php");
 ?>
 <!DOCTYPE html>
-<<<<<<< HEAD
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Crear Cuenta</title>
-        <!--Bosstrap-->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-        <!--Bosstrap-->
-        <link rel="stylesheet" href="styleuser.css">
-    </head>
-=======
 <html lang="en">
->>>>>>> 1af8c0c3307052de49b64053fd60487bba29c3ff
 
 <head>
     <meta charset="UTF-8">

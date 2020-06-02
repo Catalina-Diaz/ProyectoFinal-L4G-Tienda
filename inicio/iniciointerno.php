@@ -16,59 +16,69 @@
         <link rel="stylesheet" href="../bootstrap-social/assets/css/font-awesome.css">
         <link rel="stylesheet" href="../bootstrap-social/bootstrap-social.css">
         <link rel="stylesheet" href="inicinter.css">
-        <title>HOME</title>
+        <title>Inicio usuario</title>
     </head>
 
     <body>
-        <!---------------------------------------------------------------------------------------------------->
-        <section>
-            <nav class="navegacion">
-                <ul class="menu">
-
-                    <li class="first-item">
-                    <a href="#">
-                            <img src="imahom/us.jpg" alt="" class="imagen">
-                            <span class="text-item">Mis productos</span>
-                            <span class="down-item"></span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="../ingreso/login.php">
-                            <img src="imahom/seccion.png" alt="" class="imagen">
-                            <span class="text-item">Inicio De Sesion</span>
-                            <span class="down-item"></span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="../ingreso/crearusuario.php">
-                            <img src="imahom/sec.png" alt="" class="imagen">
-                            <span class="text-item">Crear cuenta</span>
-                            <span class="down-item"></span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="../categoria/categorias.php">
-                            <img src="imahom/cate.png" alt="" class="imagen">
-                            <span class="text-item">Categorias</span>
-                            <span class="down-item"></span>
-                        </a>
-                    </li>
-
-                </ul>
-            </nav>
-        </section>
-
-        <!----------------------------------------------------------->
-
-        <nav class="navbar navbar- warning bg-warning">
+                
+        
+    <nav class="navbar navbar- warning bg-warning">
             <form class="form-inline">
                 <input class="form-control col-md-8" type="search" placeholder="Buscador" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">BUSCAR</button>
             </form>
+            <!--
+            <div style=" font-size: 20px;">
+                <span class="text-item"> <?php //echo $usuario ?> </span>
+                <a href="" onclick="<?php //fun(); ?>" class="deletebtn"><?php //echo $otro ?></a>
+            </div>
+            -->
         </nav>
+        <!---------------------------------------------------------------------------------------------------->
+
+        <header id="main-header">
+            <section>
+                <nav class="navegacion">
+                    <ul class="menu">
+
+                        <li class="first-item">
+                        <a href="#">
+                                <img src="imahom/produc.png" alt="" class="imagen">
+                                <span class="text-item">Mis productos</span>
+                                <span class="down-item"></span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../productos/inicioProducto.php">
+                                <img src="imahom/cate.png" alt="" class="imagen">
+                                <span class="text-item">Agregar productos</span>
+                                <span class="down-item"></span>
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="../ingreso/crearusuario.php">
+                                <img src="imahom/sec.png" alt="" class="imagen">
+                                <span class="text-item">Crear cuenta</span>
+                                <span class="down-item"></span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="../categoria/categorias.php">
+                                <img src="imahom/cate.png" alt="" class="imagen">
+                                <span class="text-item">Categorias</span>
+                                <span class="down-item"></span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </section>
+        </header>
+
         <!----------------------------------------------------------->
         
         <section id="contenedor">
@@ -105,7 +115,36 @@
                 </a>
             </div>
         </section>
-        
+    <!----------------------------------------------------------------------------------->
+    
+        <div class="container">
+        <div>
+            <h1>
+                Listado de Usuarios
+            </h1>
+        </div>
+
+        <div>
+            <table border="1px" class="table table-hover"> <!--Bosstrap-->
+                <thead>
+                    <tr>
+                        <td><b>ID</b></td>
+                        <td><b>Nombre</b></td>
+                        <td><b>Apellido</b></td>
+                        <td><b>Email</b></td>
+                        <td><b>Estado</b></td>
+                        <td><b>Acciones</b></td>     
+                    </tr>
+            
+                </thead>
+
+            </table>
+            <center>
+            <br><a href="crear.php" class="btn btn-primary">Nuevo</a> <!--Bosstrap-->
+            </center>
+            
+        </div>
+
         <!-- Redes sociales ------------------------------------------>
         <footer class="page-footer font-large pt-4 bg-dark">
             <div class="container">

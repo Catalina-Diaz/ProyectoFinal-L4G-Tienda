@@ -19,34 +19,6 @@
                 <div id="login-column" class="col-md-5">
                     <div id="login-box" class="col-md-12">
 
-<<<<<<< HEAD
-            include( "../includes/db.php");
-            $user = $_POST['username'];
-            $pass = $_POST['password'];
-            $vari = "SELECT * FROM sesion WHERE correo='".$user."' AND password= '".$pass."'";
-            $query= DB::query($vari);
-            $result = mysqli_num_rows($query);
-            if($result > 0){
-                $data = mysqli_fetch_array($query);
-                print_r($data);
-            }
-        }
-    }   
-?>
-
-<!DOCTYPE html>
-    <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Iniciar sesion</title>
-        <!--Bosstrap-->b 23
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf Q9Ifjh" crossorigin="anonymous">
-        <!--Bosstrap-->
-        <link rel="stylesheet" href="style.css">
-    </head>
-=======
                         <form id="login-form" class="form" action="" method="post">
                             <h3 class="text-center text-dark">INICIAR SESION</h3>
 
@@ -54,7 +26,6 @@
                                 <label for="username" class="text-dark">Correo Electrónico</label><br>
                                 <input type="text" name="username" id="username" class="form-control">
                             </div>
->>>>>>> 1af8c0c3307052de49b64053fd60487bba29c3ff
 
                             <div class="form-group">
                                 <label for="password" class="text-dark">Contraseña</label><br>
@@ -82,6 +53,7 @@
 </body>
 
 </html>
+
 <?php
 $alert = '';
 
@@ -103,12 +75,12 @@ if (!empty($_POST)) {
         if ($result > 0) {
             $vari = "UPDATE sesion SET estado='activo' WHERE id = $fila";
             $query = DB::query($vari);
-            header('Location: ../inicio/home.php');
+            header('Location: ../inicio/iniciointerno.php');
         } else {
 ?>
-            <script>
-                document.getElementById('alerta').innerHTML = "<div class='alert alert-danger'> El usuario o contraseña son incorrectos</div>";
-            </script>
+        <script>
+            document.getElementById('alerta').innerHTML = "<div class='alert alert-danger'> El usuario o contraseña son incorrectos</div>";
+        </script>
 <?php
         }
     }
