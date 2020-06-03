@@ -1,5 +1,26 @@
 <?php
 include("guardarproducto.php");
+$nombree = "";
+$descripccionn = "";
+$precioo = "";
+$categoriaa = "";
+$imagenn = "";
+$pro = " SELECT * FROM productos";
+$productos = DB::query($pro);
+$res = mysqli_num_rows($productos);
+if ($res > 0) {
+    while ($fila = mysqli_fetch_assoc($productos)) {
+        if ($id == $fila["id"]) {
+            $nombree = $fila["nombre"];
+            $descripccionn = $fila["descripcion"];
+            $precioo = $fila["precio"];
+            $categoriaa = $fila["categoria"];
+            $imagenn = "imagen";
+        }
+    }
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,20 +76,20 @@ include("guardarproducto.php");
                             <label for="direccion" class="col-md-3 control-label">Categoria</label>
                             <div class="col-md-9">
                                 <select name="categoria" class="form-control form-control-sm"  required>
-                                    <option value="<?php echo $categoriaa ?>"> </option>
+                                    <option > </option>
                                     <?php
+                                    $sql = " SELECT nombre FROM categoria";
+                                    $categoria = DB::query($sql);
                                     $result1 = mysqli_num_rows($categoria);
                                     if ($result1 > 0) {
                                         while ($fila = mysqli_fetch_assoc($categoria)) {
                                     ?>
-                                        <option > <?php echo $fila["nombre"] ?></option>
+                                        <option <?php if($categoriaa==$fila["nombre"]){echo "selected"; } ?> > <?php echo $fila["nombre"] ?></option>
 
                                     <?php
                                         }
                                     }
                                     ?>
-
-                                    <option>Pantalones</option>
 
                                 </select>
                             </div>

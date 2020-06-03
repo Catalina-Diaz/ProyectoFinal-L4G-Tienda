@@ -10,7 +10,6 @@ if (!empty($_POST)) {
     $direccion = $_POST["direccion"];
     $ciudad = $_POST["ciudad"];
     $estado = "inactivo";
-
     $sql = "insert into usuarios(nombre,correo,password,telefono,ciudad,direccion) values('" . $nombre . "','" . $email . "','" . $pasword . "','" . $celular . "','" . $ciudad . "','" . $direccion . "');";
     DB::query($sql);
     $sql = " insert into sesion(correo,passwor,estado) values('" . $email . "','" . $pasword . "','".$estado."');";

@@ -28,29 +28,11 @@ function compressImage($source, $destination, $quality)
     // Devolvemos la imagen comprimida
     return $destination;
 }
-$sql = " SELECT nombre FROM categorias";
-$categoria = DB::query($sql);
-$pro = " SELECT * FROM productos";
-$productos = DB::query($pro);
+
+
 $id = "";
 $id = $_GET['ide'];
-$nombree = "";
-$descripccionn = "";
-$precioo = "";
-$categoriaa = "";
-$imagenn = "";
-$res = mysqli_num_rows($productos);
-if ($res > 0) {
-    while ($fila = mysqli_fetch_assoc($productos)) {
-        if ($id == $fila["id"]) {
-            $nombree = $fila["nombre"];
-            $descripccionn = $fila["descripcion"];
-            $precioo = $fila["precio"];
-            $categoriaa = $fila["categoria"];
-            $imagenn = "imagen";
-        }
-    }
-}
+
 ?>
 <script>
     window.onload = function() {
@@ -69,12 +51,30 @@ if ($res > 0) {
             $imageTemp = $_FILES["imagen"]["tmp_name"];
             $va = (int) filesize($imageTemp);
             $var = 64000;
+            $vari = "SELECT * FROM sesion";
+            $query = DB::query($vari);
+            $usur = "";
+            $otro = "";
+            $result = mysqli_num_rows($query);
+            if ($result > 0) {
+                while ($fila = mysqli_fetch_assoc($query)) {
+                    if ($fila["estado"] == "activo") {
+                        $usur = $fila["idUsuario"]."";
+                    }
+                }
+            }
             if ($va < $var) {
-                $imgContent = addslashes(file_get_contents($imageTemp));
-                $sql = " insert into productos(nombre,precio,descripcion,categoria,imagen) values('" . $nombrep . "','" . $precio . "','" . $descripccion . "','" . $categoria . "','" . $imgContent . "');";
-                DB::query($sql);
-                $mensaje = "se guardo exitosamente. ";
-                //header('Location: crearproducto.php');
+                if ($id == "nn" || $id == "") {
+                    $imgContent = addslashes(file_get_contents($imageTemp));
+                    $sql = " insert into productos(nombre,precio,descripcion,categoria,imagen,idusuario) values('" . $nombrep . "','" . $precio . "','" . $descripccion . "','" . $categoria . "','" . $imgContent . "','" . $usur . "');";
+                    DB::query($sql);
+                    $mensaje = "se guardo exitosamente. ";
+                } else {
+                    $sql = " UPDATE productos SET nombre='" . $nombrep . "',precio='" . $precio . "',descripcion = '" . $descripccion . "',categoria= '" . $categoria . "',imagen='" . $imgContent . "' WHERE id = " . $id . "";
+                    DB::query($sql);
+                    unlink($imageUploadPath);
+                    $mensaje = "se guardo exitosamente. ";
+                }
             } else {
                 $uploadPath = "";
                 $fileName = basename($_FILES["imagen"]["name"]);
@@ -89,10 +89,17 @@ if ($res > 0) {
                         $var = 64000;
                         $imgContent = addslashes(file_get_contents($compressedImage));
                         if ($va < $var) {
-                            $sql = " insert into productos(nombre,precio,descripcion,categoria,imagen) values('" . $nombrep . "','" . $precio . "','" . $descripccion . "','" . $categoria . "','" . $imgContent . "');";
-                            DB::query($sql);
-                            unlink($imageUploadPath);
-                            $mensaje = "se guardo exitosamente. ";
+                            if ($id == "nn" || $id == "") {
+                                $sql = " insert into productos(nombre,precio,descripcion,categoria,imagen,idusuario) values('" . $nombrep . "','" . $precio . "','" . $descripccion . "','" . $categoria . "','" . $imgContent . "','" . $usur . "');";
+                                DB::query($sql);
+                                unlink($imageUploadPath);
+                                $mensaje = "se guardo exitosamente. ";
+                            } else {
+                                $sql = " UPDATE productos SET nombre='" . $nombrep . "',precio='" . $precio . "',descripcion = '" . $descripccion . "',categoria= '" . $categoria . "',imagen='" . $imgContent . "' WHERE id = " . $id . "";
+                                DB::query($sql);
+                                unlink($imageUploadPath);
+                                $mensaje = "se guardo exitosamente. ";
+                            }
                         } else {
                             $mensaje = "no se puede almacenar, la imagen es muy pesada ";
                         }

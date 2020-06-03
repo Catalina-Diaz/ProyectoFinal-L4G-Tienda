@@ -1,4 +1,18 @@
 <?php
+include("../includes/db.php");
+
+$vari = "SELECT * FROM sesion";
+$query = DB::query($vari);
+$usuario = "";
+$otro = "";
+$result = mysqli_num_rows($query);
+if ($result > 0) {
+    while ($fila = mysqli_fetch_assoc($query)) {
+        if ($fila["estado"] == "activo") {
+            $usuario = $fila["idUsuario"];
+        }
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,16 +50,16 @@
                     <th>nombre</th>
                     <th>Descripccion</th>
                     <th>Precio</th>
+                    <th>Categoria</th>
                     <th>Opciones</th>
                 </tr>
             </thead>
             <tbody>
 
                 <?php
-                include('../includes/db.php');
-                $sql1 = " SELECT * FROM productos";
+               
+                $sql1 = " SELECT * FROM productos where idusuario= $usuario";
                 $todo = DB::query($sql1);
-
                 $result1 = mysqli_num_rows($todo);
                 ?>
                 <script>
@@ -53,20 +67,23 @@
                 </script>
 
                 <?php
+               
                 if ($result1 > 0) {
                     while ($fila = mysqli_fetch_assoc($todo)) {
-                ?> <tr>
+                            ?> <tr>
                             <td><?php echo $fila["nombre"] ?></td>
                             <td><?php echo $fila["descripcion"] ?></td>
                             <td><?php echo $fila["precio"] ?></td>
+                            <td><?php echo $fila["categoria"] ?></td>
                             <td> <a href="crearproducto.php?ide=<?php echo $fila["id"] ?>"><button type="button" class="btn btn-success">Editar</button> </a><?php  ?>
                                 <button type="button" class="btn btn-danger">Eliminar</button>
-
                             </td>
                         </tr>
                 <?php
+                        
                     }
                 }
+            
                 ?>
 
             </tbody>
@@ -75,6 +92,7 @@
                     <th>nombre</th>
                     <th>Descripccion</th>
                     <th>Precio</th>
+                    <th>Categoria</th>
                     <th>Opciones</th>
                 </tr>
             </tfoot>
