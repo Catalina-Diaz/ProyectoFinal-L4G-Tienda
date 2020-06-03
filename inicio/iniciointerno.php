@@ -20,8 +20,6 @@
     </head>
 
     <body>
-                
-        
     <nav class="navbar navbar- warning bg-warning">
             <form class="form-inline">
                 <input class="form-control col-md-8" type="search" placeholder="Buscador" aria-label="Search">

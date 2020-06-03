@@ -26,7 +26,6 @@
     <section>
         <nav class="navegacion">
             <ul class="menu">
-
                 <li class="first-item">
                     <a href="">
                         <img src="../imagenes/inicio.png" alt="" class="imagen">
@@ -34,7 +33,6 @@
                         <span class="down-item"></span>
                     </a>
                 </li>
-
                 <li>
                     <a href="../ingreso/login.php">
                         <img src="../imagenes/seccion.png" alt="" class="imagen">
@@ -42,7 +40,6 @@
                         <span class="down-item"></span>
                     </a>
                 </li>
-
                 <li>
                     <a href="../ingreso/login.php">
                         <img src="../" alt="" class="imagen">
@@ -50,7 +47,6 @@
                         <span class="down-item"></span>
                     </a>
                 </li>
-
                 <li>
                     <a href="../ingreso/crearusuario.php">
                         <img src="../imahom/sec.png" alt="" class="imagen">
@@ -58,7 +54,6 @@
                         <span class="down-item"></span>
                     </a>
                 </li>
-
             </ul>
         </nav>
     </section>

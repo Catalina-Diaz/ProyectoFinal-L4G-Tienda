@@ -1,6 +1,5 @@
 <?php 
     include('includes/db.php');
-
     if(isset($_GET['estado']) == TRUE){
         $estado = $_GET['estado'];
         $id = $_GET['id'];
@@ -9,8 +8,7 @@
         }else{
             $ca = "activo";
         }
-        $sql = "UPDATE persona set estado='$ca' WHERE id='$id'";
-        
+        $sql = "UPDATE persona set estado='$ca' WHERE id='$id'";   
     }else{
         $id = $_POST["id"];
         $nombre = $_POST["nombre"];
@@ -30,7 +28,6 @@
             }
         }
     }
-
     DB::query($sql);
     header('Location: index.php');
 ?>

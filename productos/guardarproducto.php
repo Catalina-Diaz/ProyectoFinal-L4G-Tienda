@@ -30,8 +30,6 @@ function compressImage($source, $destination, $quality)
 }
 
 
-$id = "";
-$id = $_GET['ide'];
 
 ?>
 <script>

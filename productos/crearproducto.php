@@ -8,6 +8,9 @@ $imagenn = "";
 $pro = " SELECT * FROM productos";
 $productos = DB::query($pro);
 $res = mysqli_num_rows($productos);
+$id = "";
+$id = $_GET['ide'];
+
 if ($res > 0) {
     while ($fila = mysqli_fetch_assoc($productos)) {
         if ($id == $fila["id"]) {
@@ -61,7 +64,7 @@ if ($res > 0) {
                             <label for="email" class="col-md-3 control-label">Descripcion</label>
                             <div class="col-md-9">
                                 <!--<input type="text" class="form-control" name="precio" placeholder="Ingresa el precio">-->
-                                <textarea name="descripccion" class="form-control" id="exampleFormControlTextarea1" rows="4" value="<?php echo $descripccionn ?>"></textarea>
+                                <textarea name="descripccion" class="form-control" id="exampleFormControlTextarea1" rows="4"> <?php echo ($descripccionn); ?></textarea>
                             </div>
                         </div>
 

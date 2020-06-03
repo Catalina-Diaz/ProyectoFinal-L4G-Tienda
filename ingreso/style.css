@@ -1,8 +1,8 @@
 
-body {
+*body {
   margin: 0;
   padding: 0;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(126, 35, 73);
   height: 50vh;
 }
 #login .container #login-row #login-column #login-box {
@@ -10,7 +10,7 @@ body {
   max-width: 600px;
   height: 320px;
   border: 1px solid #ffffff;
-  background-color: rgb(56, 68, 173);
+  background-color: rgb(255, 255, 255);
   border-radius: 11px 11px 11px 11px;
 }
 #login .container #login-row #login-column #login-box #login-form {

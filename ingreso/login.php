@@ -56,13 +56,10 @@
 
 <?php
 $alert = '';
-
 if (!empty($_POST)) {
-
     if (empty($_POST['username']) || empty($_POST['password'])) {
         $alert = "Ingrese su usuario y su clave";
     } else {
-
         include("../includes/db.php");
         $user = $_POST['username'];
         $pass = $_POST['password'];

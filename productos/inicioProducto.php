@@ -58,7 +58,7 @@ if ($result > 0) {
 
                 <?php
                
-                $sql1 = " SELECT * FROM productos where idusuario= $usuario";
+                $sql1 = "SELECT * FROM productos where idusuario= $usuario";
                 $todo = DB::query($sql1);
                 $result1 = mysqli_num_rows($todo);
                 ?>

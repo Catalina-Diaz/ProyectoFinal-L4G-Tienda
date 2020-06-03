@@ -15,8 +15,9 @@ if ($result > 0) {
     if ($usuario != "") {
         $otro = "Cerrar sesion";
     }
-}
- function fun(){ 
+} 
+function fun()
+{
     $vari = "SELECT * FROM sesion";
     $query = DB::query($vari);
     $result = mysqli_num_rows($query);
@@ -55,7 +56,7 @@ if ($result > 0) {
         <a class="navbar-brand">
             <H1>
                 <p>TIENDA <kbd>TIERRA MUJER</kbd></p>
-            <H1>
+                <H1>
         </a>
 
         <form class="form-inline">
