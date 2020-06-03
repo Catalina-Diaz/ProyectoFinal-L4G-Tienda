@@ -119,15 +119,7 @@ if ($res > 0) {
                     </form>
                 </div>
             </div>
-
         </div>
-
-        <div id="loginbox" style="margin-top:50px;" class=" mainbox col-md-6 col-md-offset-3 col-sm-4 col-sm-offset-8">
-            <button id="btn-signup" type="button" class="btn btn-success"><i class="icon-hand-right"></i> &nbsp Agregar Nuevo Producto</button>
-            <button id="btn-signup" type="button" class="btn btn-success"><i class="icon-hand-right"></i> &nbsp Editar Productos</button>
-            <button id="btn-signup" type="button" class="btn btn-success"><i class="icon-hand-right"></i> &nbsp Eliminar Productos</button>
-        </div>
-
     </div>
 </body>
 
