@@ -1,50 +1,27 @@
 <?php
-    if(isset($_POST['host'])){
+include ("includes/config.php");
+$conn2 =new mysqli(HOST, USER, PASSWORD );
+$query1 ="CREATE DATABASE tienda";
+mysqli_query($conn2,$query1);
+
+$conn =new mysqli(HOST, USER, PASSWORD, DB);
+
+$query = '';
+$sqlScript = file('includes/db.sql');
+foreach ($sqlScript as $line)   {
         
-        $file = fopen("includes/config.php", "w"); 
-
-        fwrite($file, "<?php" . PHP_EOL);
-        fwrite($file, "define('HOST', '" . $_POST['host'] ."');" . PHP_EOL);
-        fwrite($file, "define('USER', '" . $_POST['user'] ."');" . PHP_EOL);
-        fwrite($file, "define('PASSWORD', '" . $_POST['password'] ."');" . PHP_EOL);
-        fwrite($file, "define('DB', '" . $_POST['db'] ."');" . PHP_EOL);
-        fwrite($file, "?>");
-
-        fclose($file);
-
-        echo "Creando archivo de conexion";
-        die;
-    }
+        $startWith = substr(trim($line), 0 ,2);
+        $endWith = substr(trim($line), -1 ,1);
+        
+        if (empty($line) || $startWith == '--' || $startWith == '/*' || $startWith == '//') {
+                continue;
+        }
+                
+        $query = $query . $line;
+        if ($endWith == ';') {
+                mysqli_query($conn,$query) or die('<div class="error-response sql-import-response">Problemas al ejecutar SQL query <b>' . $query. '</b></div>');
+                $query= '';             
+        }
+}
+echo '<div class="success-response sql-import-response"> el archivo SQL ha sido importado con exito</div>';
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-
-    <body>
-        <h1>Para el correcto funcionamiento del sistema llena la siguiente información:</h1>
-        <form action="install.php" method="post">
-            <div>
-                <label for="host">Host</label>
-                <input type="text" name="host" >
-            </div>
-            <div>
-                <label for="user">Usuario DB</label>
-                <input type="text" name="user" >
-            </div>
-            <div>
-                <label for="password">Contrasña DB</label>
-                <input type="text" name="password">
-            </div>
-            <div>
-                <label for="db">Base de datos</label>
-                <input type="text" name="db">
-            </div>
-            <button>Guardar</button>
-        </form>
-    </body>
-</html>
