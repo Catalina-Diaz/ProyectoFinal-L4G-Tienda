@@ -27,33 +27,14 @@
         <nav class="navegacion">
             <ul class="menu">
                 <li class="first-item">
-                    <a href="">
+                    <a href="../inicio/home.php">
                         <img src="../imagenes/inicio.png" alt="" class="imagen">
                         <span class="text-item">Inicio</span>
                         <span class="down-item"></span>
                     </a>
                 </li>
-                <li>
-                    <a href="../ingreso/login.php">
-                        <img src="../imagenes/seccion.png" alt="" class="imagen">
-                        <span class="text-item">Nosotros</span>
-                        <span class="down-item"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="../ingreso/login.php">
-                        <img src="../" alt="" class="imagen">
-                        <span class="text-item">Inicio De Sesion</span>
-                        <span class="down-item"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="../ingreso/crearusuario.php">
-                        <img src="../imahom/sec.png" alt="" class="imagen">
-                        <span class="text-item">Crear cuenta</span>
-                        <span class="down-item"></span>
-                    </a>
-                </li>
+
+                
             </ul>
         </nav>
     </section>
@@ -77,7 +58,7 @@
                                 <h2><?php echo $fila["nombre"] ?></h2>
                             </div>
                         </a>
-                        </div>
+                    </div>
                 <?php
                 }
             }

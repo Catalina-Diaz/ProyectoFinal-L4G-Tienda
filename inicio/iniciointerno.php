@@ -40,26 +40,17 @@
                     <ul class="menu">
 
                         <li class="first-item">
-                        <a href="#">
-                                <img src="imahom/produc.png" alt="" class="imagen">
+                        <a href="../productos/inicioProducto.php">
+                                <img src="imahom/carrito.png" alt="" class="imagen">
                                 <span class="text-item">Mis productos</span>
                                 <span class="down-item"></span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="../productos/inicioProducto.php">
-                                <img src="imahom/cate.png" alt="" class="imagen">
+                            <a href="../productos/crearproducto.php">
+                                <img src="imahom/agregar.png" alt="" class="imagen">
                                 <span class="text-item">Agregar productos</span>
-                                <span class="down-item"></span>
-                            </a>
-                        </li>
-
-
-                        <li>
-                            <a href="../ingreso/crearusuario.php">
-                                <img src="imahom/sec.png" alt="" class="imagen">
-                                <span class="text-item">Crear cuenta</span>
                                 <span class="down-item"></span>
                             </a>
                         </li>
@@ -114,34 +105,6 @@
             </div>
         </section>
     <!----------------------------------------------------------------------------------->
-    
-        <div class="container">
-        <div>
-            <h1>
-                Listado de Usuarios
-            </h1>
-        </div>
-
-        <div>
-            <table border="1px" class="table table-hover"> <!--Bosstrap-->
-                <thead>
-                    <tr>
-                        <td><b>ID</b></td>
-                        <td><b>Nombre</b></td>
-                        <td><b>Apellido</b></td>
-                        <td><b>Email</b></td>
-                        <td><b>Estado</b></td>
-                        <td><b>Acciones</b></td>     
-                    </tr>
-            
-                </thead>
-
-            </table>
-            <center>
-            <br><a href="crear.php" class="btn btn-primary">Nuevo</a> <!--Bosstrap-->
-            </center>
-            
-        </div>
 
         <!-- Redes sociales ------------------------------------------>
         <footer class="page-footer font-large pt-4 bg-dark">

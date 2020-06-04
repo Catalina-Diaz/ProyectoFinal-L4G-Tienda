@@ -8,8 +8,7 @@ $imagenn = "";
 $pro = " SELECT * FROM productos";
 $productos = DB::query($pro);
 $res = mysqli_num_rows($productos);
-$id = "";
-$id = $_GET['ide'];
+
 
 if ($res > 0) {
     while ($fila = mysqli_fetch_assoc($productos)) {
@@ -110,7 +109,7 @@ if ($res > 0) {
                             <div class="col-md-offset-3 col-md-9">
                                 <button id="btn" type="submit" class="btn btn-success"><i class="icon-hand-right"></i> Guardar</button>
                                 <span style="margin-left:8px"></span>
-                                <a href="login.php"> Ver productos vigentes</a>
+                                <a href="../productos/inicioProducto.php"> Ver productos vigentes</a>
                             </div>
                         </div>
                         <div class="form-group">

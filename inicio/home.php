@@ -69,14 +69,6 @@ function fun()
         <nav class="navegacion">
             <ul class="menu">
 
-                <li class="first-item">
-                    <a href="#">
-                        <img src="imahom/us.jpg" alt="" class="imagen">
-                        <span class="text-item">Nosotros</span>
-                        <span class="down-item"></span>
-                    </a>
-                </li>
-
                 <li>
                     <a href="../ingreso/login.php">
                         <img src="imahom/seccion.png" alt="" class="imagen">
@@ -140,6 +132,37 @@ function fun()
             </a>
         </div>
     </section>
+
+    <!-- Redes sociales ------------------------------------------>
+    <footer class="page-footer font-large pt-4 bg-dark">
+        <div class="container">
+            <ul class="list-unstyled list-inline text-center">
+
+                <li class="list-inline-item">
+                    <a class="btn btn-social-icon btn-facebook">
+                        <span class="fa fa-facebook"></span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn btn-social-icon btn-twitter">
+                        <span class="fa fa-twitter"></span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn btn-social-icon btn-instagram">
+                        <span class="fa fa-instagram"></span>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn btn-social-icon btn-google">
+                        <span class="fa fa-google"></span>
+                    </a>
+                </li>
+            </ul>
+            <!-- Social buttons -->
+            <a class="fb-ic mr-3" role="button"><i class="fab fa-lg fa-facebook-f"></i></a>
+        </div>
+    </footer>
 </body>
 
 </html>

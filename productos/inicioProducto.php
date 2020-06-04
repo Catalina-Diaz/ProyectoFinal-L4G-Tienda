@@ -42,7 +42,7 @@ if ($result > 0) {
             </div>
         </div>
         <a href="crearproducto.php?ide=nn"><button type="button" class="btn btn-success">Agregar nuevo </button> </a>
-
+        <a href="../inicio/iniciointerno.php"><button type="button" class="btn btn-success">Inicio </button> </a>
          
         <table id="example" class="table table-striped table-bordered" style="width:100%">
             <thead>

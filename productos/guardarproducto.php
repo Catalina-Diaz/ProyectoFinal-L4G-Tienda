@@ -1,6 +1,8 @@
 <?php
 include('../includes/db.php');
 $mensaje = "";
+$id = "";
+$id = $_GET['ide'];
 function compressImage($source, $destination, $quality)
 {
     // Obtenemos la información de la imagen
